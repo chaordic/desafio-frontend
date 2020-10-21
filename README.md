@@ -21,7 +21,7 @@ Esse desafio foi elaborado para avaliar suas habilidades como desenvolvedor. Nã
 
 - Faça um fork desse repositório.
 - Implemente o layout conforme os PDFs ([brewery-home](brewery-home.pdf) e [brewery-detail](brewery-detail.pdf)).
-  - Siga os critérios de aceite descritos no [ACCEPTANCE-CRITERIA.md](ACCEPTANCE-CRITERIA).
+  - Siga os critérios de aceite descritos no [ACCEPTANCE-CRITERIA.md](ACCEPTANCE-CRITERIA.md).
 - Documente os passos necessários para podermos executar sua solução, queremos ver ela em ação.
 - Abra um PR com a sua solução.
 
