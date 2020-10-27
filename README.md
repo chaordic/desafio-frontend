@@ -1,36 +1,20 @@
-# Front end @Linx
+## Breweries Challenge
 
-Esse desafio é parte do processo de seleção para desenvolvedores front end que desejam trabalhar na [Linx](https://www.linx.com.br). Se você ainda não está participando do processo, pode se inscrever [aqui](https://linx.recruiterbox.com/jobs/fk0qa7e/).
+### Setup
 
-## Sobre o desafio
+- `npm install` to install dependecies
+- `npm run start` to run locally
 
-Esse desafio foi elaborado para avaliar suas habilidades como desenvolvedor. Não existem respostas certas ou erradas, existem critérios de aceite que serão avaliados, assim como a sua solução.
+### Lighthouse Test
 
-## O que será avaliado?
+- `npm run build` to provide production enviroment
+- `npm install -g serve` to install serve dependency
+- `serve -s build`
 
-- Atendimento aos critérios de aceite
-- A solução em si
-  - Legibilidade do código
-  - Simplicidade
-  - Performance
-- A sua comunicação
-  - Histórico de commits
-  - Documentação
+#### Latest tests
 
-## O que e como entregar?
+- ![image info](./src/doc/images/lighthouse-test.png)
 
-- Faça um fork desse repositório.
-- Implemente o layout conforme os PDFs ([brewery-home](brewery-home.pdf) e [brewery-detail](brewery-detail.pdf)).
-  - Siga os critérios de aceite descritos no [ACCEPTANCE-CRITERIA.md](ACCEPTANCE-CRITERIA.md).
-- Documente os passos necessários para podermos executar sua solução, queremos ver ela em ação.
-- Abra um PR com a sua solução.
+### Preamble
 
-## Considerações
-
-- Você pode usar a ferramenta que preferir para desenvolver sua solução.
-- Não temos um prazo estipulado para a solução desse desafio, mas acreditamos que você não deveria gastar mais do que 10 horas nele. É importante que você alinhe o prazo de entrega com seu contato na Linx.
-- Feito é melhor do que perfeito. Não gaste tempo demais tentando nos impressionar, foque nos critérios de aceite, se sobrar algum tempo, pode pensar em como incrementar a solução. Mas lembre-se, menos é mais.
-
-## Perguntas, dúvidas, sugestões?
-
-Abra uma [issue](https://github.com/chaordic/desafio-frontend/issue/new) e nós vamos te ajudar.
+- I followed the instructions and didn't work more than 10 hours on this code.
