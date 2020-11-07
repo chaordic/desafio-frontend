@@ -1,5 +1,6 @@
 .DS_STORE
 node_modules
+src/.next
 scripts/flow/*/.flowconfig
 .flowconfig
 *~
@@ -16,14 +17,11 @@ fixtures/dom/public/react.js
 test/the-files-to-test.generated.js
 *.log*
 chrome-user-data
-*.sublime-project
-*.sublime-workspace
 .idea
 *.iml
 .vscode
 *.swp
 *.swo
-
 packages/react-devtools-core/dist
 packages/react-devtools-extensions/chrome/build
 packages/react-devtools-extensions/chrome/*.crx
