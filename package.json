@@ -1,0 +1,13 @@
+{
+  "name": "desafio-frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ymello/desafio-frontend.git",
+  "author": "ymello <contato@yurimello.com>",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^10.0.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
