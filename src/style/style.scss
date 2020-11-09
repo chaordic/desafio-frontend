@@ -1,3 +1,7 @@
-.test {
-    font-size: 50px;
-  }
+//CORE LAYOUT
+@import 'core/reset';
+@import 'core/variables';
+
+//PAGE STYLES
+
+@import 'page/header';

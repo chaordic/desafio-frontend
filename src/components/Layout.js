@@ -1,10 +1,10 @@
 import React from 'react';
-import Menu from './Menu';
+import Header from './Header';
 
 const Layout = ({ children }) => {
   return (
     <div>
-      <Menu />
+      <Header />
       {children}
     </div>
   );
