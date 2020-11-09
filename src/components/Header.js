@@ -4,13 +4,14 @@ import { Grid, Row, Col } from 'react-flexbox-grid/dist/react-flexbox-grid';
 const Header = () => {
   return (
     <header>
-      <Grid fluid>
-        <Row>
-          <Col xs={6} md={3}>
-            Hello, world!
-          </Col>
-        </Row>
-      </Grid>
+        <div className="container">
+            <Row start="xs">
+                <h1>TITLE</h1>
+            </Row>
+            <Row start="xs">
+                <p>a Breweries list by open brewery DB</p>
+            </Row>
+      </div>
     </header>
   );
 };
