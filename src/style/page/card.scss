@@ -1,0 +1,26 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+    &:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+  }
+
+  .title-box {
+    padding: 20px 20px;
+  }
+  .card-box {
+    padding: 20px 20px 0px 20px;
+    flex-grow: 1;
+  }
+
+  .card-footer {
+    border-top: 1px solid #ededed;
+    padding: 8px 20px;
+  }

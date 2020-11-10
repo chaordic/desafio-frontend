@@ -1,3 +1,8 @@
+
+h1 {
+    font-size: 32px;
+}
+
 .container {
     padding: 20px 15px 0 15px;
     max-width: 1280px;
@@ -6,8 +11,13 @@
 }
 
 .header-container {
-    padding: 20px 0 0 0;
+    padding-top: 30px;
     max-width: 1280px;
     margin: 0 auto;
     width: 100%;
+}
+
+.description {
+    margin-top: 10px;
+    font-size: 17px;
 }
