@@ -5,7 +5,9 @@ const Card = () => {
   return (
     <Col xs={3} sm={3} md={3}>
         <div className="card">
-            <div className="title-box"><h1>Avondale Brewing Co</h1></div>
+            <div className="title-box">
+                <h1 className="title">Avondale Brewing Co</h1>
+            </div>
             <div className="card-box">
                 <p>201 41st St S</p>
                 <p>Irmingham Alabama - 35222-1932</p>
