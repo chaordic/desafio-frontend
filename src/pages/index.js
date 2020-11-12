@@ -1,11 +1,20 @@
-import React from 'react';
-import axios from 'axios';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux'
 import Layout from '../components/Layout';
 import PageList from '../components/PageList';
-import {getBreweryData} from '../services/brewery';
+import { wrapper } from '../store/store';
+import { getBreweries } from '../store/brewary/action';
 
-const Index = ({ response }) => {
-  console.log(">>>>", response);
+const Index = (props) => {
+  useEffect(() => {
+    const data = props.getBreweries()
+
+    return () => {
+     data
+    }
+  }, [props])
+
+
   return (
     <Layout>
       <PageList />
@@ -13,9 +22,14 @@ const Index = ({ response }) => {
   );
 };
 
-Index.getInitialProps = () => {
-  const data = getBreweryData();
-  return { response: data }
+export const getServerSideProps = wrapper.getServerSideProps(async ({ store }) => {
+  store.dispatch(getBreweries())
+})
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getBreweries: getBreweries(),
+  }
 }
 
-export default Index;
+export default connect(null, mapDispatchToProps)(Index);
