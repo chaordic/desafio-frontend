@@ -1,9 +1,14 @@
+import { Provider } from 'react-redux'
+import { useStore } from '../stores/store'
 import 'react-flexbox-grid/dist/react-flexbox-grid.css'
-import { wrapper } from '../store/store'
 import '../style/style.scss';
 
-function MyApp({ Component, pageProps }) {
-    return <Component {...pageProps} />
-}
+export default function App({ Component, pageProps }) {
+  const store = useStore(pageProps.initialReduxState)
 
-export default wrapper.withRedux(MyApp)
+  return (
+    <Provider store={store}>
+      <Component {...pageProps} />
+    </Provider>
+  )
+}

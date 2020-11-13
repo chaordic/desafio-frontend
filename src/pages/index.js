@@ -2,18 +2,9 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux'
 import Layout from '../components/Layout';
 import PageList from '../components/PageList';
-import { wrapper } from '../store/store';
-import { getBreweries } from '../store/brewary/action';
+import { getBreweries }  from '../stores/actions';
 
-const Index = (props) => {
-  useEffect(() => {
-    const data = props.getBreweries()
-
-    return () => {
-     data
-    }
-  }, [props])
-
+const Index = () => {
 
   return (
     <Layout>
@@ -22,14 +13,10 @@ const Index = (props) => {
   );
 };
 
-export const getServerSideProps = wrapper.getServerSideProps(async ({ store }) => {
-  store.dispatch(getBreweries())
-})
-
 const mapDispatchToProps = (dispatch) => {
   return {
-    getBreweries: getBreweries(),
+    getBreweries: dispatch(getBreweries),
   }
 }
 
-export default connect(null, mapDispatchToProps)(Index);
+export default connect(state => state)(Index);

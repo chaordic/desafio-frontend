@@ -1,7 +1,6 @@
 import axios from 'axios';
 import {BREWERIES_URL} from '../../assets/constants';
 
-
 export const brewariesActionTypes = {
   SUCESS: 'BREWERY_LIST_SUCESS',
 }
