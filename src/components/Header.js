@@ -9,7 +9,7 @@ const Header = () => {
                 <h1>Breweries</h1>
             </Row>
             <Row start="xs">
-                <p className="description">A breweries list by Open Brewery DB</p>
+                <span className="description">A breweries list by Open Brewery DB</span>
             </Row>
       </div>
     </header>
