@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-import Layout from '../components/Layout';
-import PageList from '../components/PageList';
-import { getBreweries }  from '../stores/actions';
+import Layout from '../components/Layout'
+import PageList from '../components/PageList'
+import { startState } from '../hooks/startStateHook'
 
 const Index = () => {
+  startState()
 
   return (
     <Layout>
@@ -12,11 +13,5 @@ const Index = () => {
     </Layout>
   );
 };
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    getBreweries: dispatch(getBreweries),
-  }
-}
 
 export default connect(state => state)(Index);
