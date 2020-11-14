@@ -6,10 +6,10 @@ const Header = () => {
     <header>
         <div className="header-container">
             <Row start="xs">
-                <h1>TITLE</h1>
+                <h1>Breweries</h1>
             </Row>
             <Row start="xs">
-                <p className="description">A Breweries list by open brewery DB</p>
+                <p className="description">A breweries list by Open Brewery DB</p>
             </Row>
       </div>
     </header>

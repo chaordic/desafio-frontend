@@ -13,8 +13,8 @@ const PageList = (state) => {
 
   return (
     <Row around="xs">
-      {breweriesList.map((brewery=> {
-        return <Card data={brewery} />
+      {breweriesList.map(((brewery, index) => {
+        return <Card key={index} data={brewery} />
       }))}
     </Row>
   );
