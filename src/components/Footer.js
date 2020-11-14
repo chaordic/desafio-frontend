@@ -6,7 +6,7 @@ const Footer = () => {
     <footer>
        <div className="footer-container">
             <Row start="xs">
-                <h1>Breweries List</h1>
+                <span>Breweries List</span>
             </Row>
       </div>
     </footer>
