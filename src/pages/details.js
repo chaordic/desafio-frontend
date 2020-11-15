@@ -5,7 +5,6 @@ import StoreInfo from '../components/StoreInfo'
 import { startState } from '../hooks/startStateHook'
 
 const Details = () => {
-
   return (
     <Layout>
       <StoreInfo />

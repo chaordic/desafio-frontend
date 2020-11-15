@@ -6,9 +6,9 @@ const StoreInfo = () => {
 
   return (
     <Col xs={12} sm={12} md={12}>
-      <div className="card">
+      <div className="card-no-hover">
           <div className="title-box">
-              <h1 className="title">TEST</h1>
+              <h1 className="title">MADTREE BREWEING</h1>
           </div>
           <div className="card-box">
               <span>Type: Regional</span>
@@ -19,9 +19,6 @@ const StoreInfo = () => {
               <span>Website: http://www.site.com.br</span>
               <span>Phone: 2138368733</span>
               <span>Open in Maps: 39.1563456, 39.1563456</span>
-          </div>
-          <div className="card-footer">
-              <p>teste</p>
           </div>
       </div>
     </Col>

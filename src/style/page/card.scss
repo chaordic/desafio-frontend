@@ -7,11 +7,17 @@
     margin-top: 8px;
     margin-bottom: 8px;
 
-    &:hover {
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    }
+    &-no-hover{
+      @extend .card;
+      pointer-events: none;
+      flex-grow: 1;
   }
 
+    &:hover {
+      box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    }
+  }
+  
   .title-box {
     padding: 20px 20px;
 
@@ -23,6 +29,8 @@
   }
   .card-box {
     padding: 20px 20px 0px 20px;
+    display: flex;
+    flex-direction: column;
     font-weight: 300;
     color: #4a4a4a;
     flex-grow: 1;
