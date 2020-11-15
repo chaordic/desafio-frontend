@@ -2,7 +2,6 @@ import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid/dist/react-flexbox-grid';
 
 const Card = ({data}) => {
-  console.log("data", data)
 
   const title = data.name
   const city = data.city

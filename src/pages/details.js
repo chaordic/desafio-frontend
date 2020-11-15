@@ -1,15 +1,14 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Layout from '../components/Layout'
-import Details from '../components/Details'
+import StoreInfo from '../components/StoreInfo'
 import { startState } from '../hooks/startStateHook'
 
 const Details = () => {
-  startState()
 
   return (
     <Layout>
-      <Details />
+      <StoreInfo />
     </Layout>
   );
 };

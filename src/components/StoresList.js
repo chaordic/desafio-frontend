@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Row } from 'react-flexbox-grid/dist/react-flexbox-grid';
 import Card from './Card';
 
-const PageList = (state) => {
+const StoresList = (state) => {
   const { breweries } = state;
   const breweriesList = breweries.data || [];
 
@@ -21,4 +21,4 @@ const PageList = (state) => {
 };
 
 
-export default connect(state => state)(PageList);
+export default connect(state => state)(StoresList);
