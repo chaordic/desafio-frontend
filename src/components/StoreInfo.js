@@ -1,13 +1,23 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Row, Col } from 'react-flexbox-grid/dist/react-flexbox-grid'
+import { Col } from 'react-flexbox-grid/dist/react-flexbox-grid'
+import { useGetSingleData } from '../hooks'
 
-const StoreInfo = (state) => {
+const StoreInfo = ({breweries,location}) => {
+  const {query = null} = location
+  const { single = null } = breweries
+
+  if(query) {
+    const id = query.id
+    useGetSingleData(id)
+  }
+
+  const { name } = single
   return (
     <Col xs={12} sm={12} md={12}>
       <div className="card-no-hover">
           <div className="title-box">
-              <h1 className="title">MADTREE BREWEING</h1>
+              <h1 className="title">{name}</h1>
           </div>
           <div className="card-box">
               <span>Type: Regional</span>

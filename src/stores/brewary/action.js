@@ -17,7 +17,7 @@ export const getBreweries = () => (dispatch) => {
 }
 
 
-export const getBrewerie = (id) => (dispatch) => {
+export const getBrewery = (id) => (dispatch) => {
   axios.get(`${BREWERIES_URL}/${id}`).then(response => {
     const data = response.data;
     return dispatch({
