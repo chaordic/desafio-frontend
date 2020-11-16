@@ -2,8 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Row, Col } from 'react-flexbox-grid/dist/react-flexbox-grid'
 
-const StoreInfo = () => {
-
+const StoreInfo = (state) => {
   return (
     <Col xs={12} sm={12} md={12}>
       <div className="card-no-hover">
@@ -24,6 +23,5 @@ const StoreInfo = () => {
     </Col>
   )
 };
-
 
 export default connect(state => state)(StoreInfo);

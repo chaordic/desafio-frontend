@@ -1,14 +1,13 @@
 import React from 'react';
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 import { Grid, Row, Col } from 'react-flexbox-grid/dist/react-flexbox-grid';
 
 const Card = ({data}) => {
-  const router = useRouter()
-  const href = `/details/${data.id}`
 
-  const handleClick = (e) => {
-    e.preventDefault()
-    router.push(href)
+  const href = {
+    pathname: `/detail/${data.id}`,
+    query: { id: `${data.id}` },
   }
 
   const title = data.name
@@ -27,7 +26,7 @@ const Card = ({data}) => {
                 <p>{street}</p>
                 <p>{`${state} - ${postalCode}`}</p>
                 <p>{city}</p>
-                <a href={href} onClick={handleClick}>LINK TEST</a>
+                <Link href={href}><a>LINK TEST</a></Link>
             </div>
             <div className="card-footer">
                 <p>unitedStates</p>
