@@ -14,7 +14,6 @@ const StoreInfo = ({breweries,location}) => {
 
   if(single) {
     const { name, brewery_type, street, city, state, country, website_url, phone, latitude, longitude } = single
-    console.log(single)
 
     return (
       <Col xs={12} sm={12} md={12}>
