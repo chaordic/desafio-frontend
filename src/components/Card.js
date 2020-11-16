@@ -1,5 +1,4 @@
-import React from 'react';
-import { useRouter } from 'next/router'
+import React from 'react'
 import Link from 'next/link'
 import { Grid, Row, Col } from 'react-flexbox-grid/dist/react-flexbox-grid';
 
