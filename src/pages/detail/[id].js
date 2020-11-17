@@ -15,7 +15,7 @@ const Details = ({Urllocation}) => {
 };
 
 
-export function getServerSideProps({ query, params}) {
+export const getServerSideProps = ({ query, params}) => {
 
   const Urllocation = {
     Urllocation: {

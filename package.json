@@ -6,6 +6,7 @@
   "author": "ymello <contato@yurimello.com>",
   "license": "MIT",
   "dependencies": {
+    "@svgr/webpack": "^5.5.0",
     "axios": "0.21.0",
     "next": "9.4.1",
     "next-redux-wrapper": "6.0.2",
