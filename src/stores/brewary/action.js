@@ -6,8 +6,17 @@ export const brewariesActionTypes = {
   SINGLE_SUCESS: 'BREWERY_SINGLE_SUCESS',
 }
 
-export const getBreweries = () => (dispatch) => {
-  axios.get(`${BREWERIES_URL}`).then(response => {
+export const getBreweries = (page) => (dispatch) => {
+
+  let url = `${BREWERIES_URL}`
+
+  if(page){
+    url = `${url}?page=${page}`
+  }
+
+  console.log(url)
+
+  axios.get(url).then(response => {
     const data = response.data;
     return dispatch({
       type: brewariesActionTypes.SUCESS,

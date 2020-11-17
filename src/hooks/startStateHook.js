@@ -1,10 +1,10 @@
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { getBreweries }  from '../stores/actions';
+import { getBreweries }  from '../stores/actions'
 
-export const startState = () => {
+export const startState = (page = null) => {
   const dispatch = useDispatch()
   useEffect(() => {
-    dispatch(getBreweries())
+    dispatch(getBreweries(page))
   }, [dispatch])
 };
