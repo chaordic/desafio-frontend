@@ -8,6 +8,8 @@
     flex-direction: column;
     margin-top: 8px;
     margin-bottom: 8px;
+    color: inherit;
+    text-decoration: inherit;
 
     @include lg {
       min-width: 312px;

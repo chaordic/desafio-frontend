@@ -1,0 +1,21 @@
+.flag {
+  border: none;
+  color: white;
+  padding: 0.6em 0.8em;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.4em;
+  display: inline-block;
+  font-size: 0.6em;
+
+  &.green {background-color: #4CAF50;}
+  &.blue {background-color: #008CBA;}
+  &.red {background-color: #f44336; color: white;}
+  &.yellow {background-color: #f6ff00; color: black;}
+  &.light-green {background-color: #44ff00; color: black;}
+  &.pink {background-color: #ee00ff; color: white;}
+  &.cian {background-color: #00fbff; color: black;}
+  &.dark {background-color: #323232;}
+  &.gray {background-color: #555555;}
+
+}

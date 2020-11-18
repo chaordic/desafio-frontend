@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Flag from './Flag'
 import { Grid, Row, Col } from 'react-flexbox-grid/dist/react-flexbox-grid'
 
 const Card = ({data}) => {
@@ -10,7 +11,7 @@ const Card = ({data}) => {
   return (
     <Col xs={12} sm={4} md={3} lg={3}>
        <Link href={href}>
-          <div className="card">
+          <a className="card">
               <div className="title-box">
                   <h1 className="title">{name}</h1>
               </div>
@@ -20,9 +21,9 @@ const Card = ({data}) => {
                   <p>{city}</p>
               </div>
               <div className="card-footer">
-                  <a href="/">{brewery_type}</a>
+                  <Flag type={brewery_type} />
               </div>
-          </div>
+          </a>
         </Link>
     </Col>
   );
