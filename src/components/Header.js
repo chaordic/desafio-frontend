@@ -11,7 +11,7 @@ const Header = () => {
             <Row start="xs">
                 <span className="description">A breweries list by Open Brewery DB</span>
             </Row>
-      </div>
+        </div>
     </header>
   );
 };
