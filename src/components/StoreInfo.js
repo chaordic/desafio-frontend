@@ -1,17 +1,15 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Col } from 'react-flexbox-grid/dist/react-flexbox-grid'
-import { useRouter } from 'next/router'
 import BackPage from './BackPage'
 import { useGetSingleData } from '../hooks'
 
-const StoreInfo = ({breweries}) => {
-  const router = useRouter()
-  const currentQuery = router.query
+const StoreInfo = ({breweries,location}) => {
+  const {query = null} = location
   const { single = null } = breweries
 
-  if(currentQuery) {
-    const id = currentQuery.id
+  if(query) {
+    const id = query.id
     useGetSingleData(id)
   }
 
@@ -28,18 +26,18 @@ const StoreInfo = ({breweries}) => {
                   <h1 className="title">{name}</h1>
               </div>
               <div className="card-box">
-                  <span>Type: {brewery_type}</span>
-                  <span>Street: {street}</span>
-                  <span>City: {city}</span>
-                  <span>State: {state}</span>
-                  <span>Country: {country}</span>
-                  <span>Website:
+                  <span>Type:&nbsp;{brewery_type}</span>
+                  <span>Street:&nbsp;{street}</span>
+                  <span>City:&nbsp;{city}</span>
+                  <span>State:&nbsp;{state}</span>
+                  <span>Country:&nbsp;{country}</span>
+                  <span>Website:&nbsp;&nbsp;
                     <a href={website_url} target="_blank">
                         {website_url}
                     </a>
                   </span>
-                  <span>Phone: {phone}</span>
-                  <span>Open in Maps:
+                  <span>Phone:&nbsp;{phone}</span>
+                  <span>Open in Maps:&nbsp;&nbsp;
                       <a href={mapLink} target="_blank">
                           {`${latitude},${longitude}`}
                       </a>
@@ -54,4 +52,4 @@ const StoreInfo = ({breweries}) => {
   return null
 };
 
-export default connect(state => state)(StoreInfo);
+export default connect(state => state)(StoreInfo)

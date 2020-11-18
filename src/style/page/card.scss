@@ -26,6 +26,13 @@
     flex-direction: column;
     margin-top: 8px;
     margin-bottom: 8px;
+
+    .card-box {
+      span {
+      margin-bottom: 8px;
+      }
+    }
+
   }
 
   .title-box {
