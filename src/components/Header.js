@@ -3,16 +3,18 @@ import { Grid, Row, Col } from 'react-flexbox-grid/dist/react-flexbox-grid';
 
 const Header = () => {
   return (
-    <header>
         <div className="header-container">
-            <Row start="xs">
-                <h1>Breweries</h1>
+          <div className="header-title">
+            <Row middle="xs">
+                <Col md={12}>
+                    <h1>Breweries</h1>
+                </Col>
+                <Col md={12}>
+                    <span className="description">A breweries list by Open Brewery DB</span>
+                </Col>
             </Row>
-            <Row start="xs">
-                <span className="description">A breweries list by Open Brewery DB</span>
-            </Row>
+          </div>
         </div>
-    </header>
   );
 };
 

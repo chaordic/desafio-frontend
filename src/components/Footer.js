@@ -3,13 +3,11 @@ import { Row } from 'react-flexbox-grid/dist/react-flexbox-grid';
 
 const Footer = () => {
   return (
-    <footer>
-       <div className="footer-container">
+      <div className="footer-container">
             <Row start="xs">
                 <span>Breweries List</span>
             </Row>
       </div>
-    </footer>
   );
 };
 

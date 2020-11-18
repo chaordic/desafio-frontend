@@ -1,14 +1,16 @@
-header {
-    height: 9em;
-    margin-bottom: 1em;
-    background: rgb(33,26,26);
-    background: linear-gradient(90deg, rgba(33,26,26,1) 65%, rgba(66,62,61,1) 100%);
-    color: #fff;
-}
-
 .header-container {
-  max-width: 1280px;
-  margin: auto;
+  height: 9em;
+  margin-bottom: 1em;
+  align-items: center;
+  background: rgb(33,26,26);
+  background: linear-gradient(90deg, rgba(33,26,26,1) 65%, rgba(66,62,61,1) 100%);
+  color: #fff;
+
+  .header-title {
+    padding: 2.5em 0.9em 0 0.9em;
+    max-width: 1280px;
+    margin: auto;
+  }
 }
 
 .description {
