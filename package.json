@@ -9,7 +9,6 @@
     "@svgr/webpack": "^5.5.0",
     "axios": "0.21.0",
     "next": "10.0.2",
-    "next-on-netlify": "^2.6.3",
     "next-redux-wrapper": "6.0.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
@@ -23,8 +22,8 @@
   },
   "scripts": {
     "dev": "next dev ./src",
-    "build": "next build ./src",
-    "start": "next start ./src",
-    "postbuild": "next-on-netlify"
+    "build": "next build ./src ",
+    "start": "next start ./src -p $PORT",
+    "heroku-postbuild": "next build ./src"
   }
 }
