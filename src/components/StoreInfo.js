@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Col } from 'react-flexbox-grid/dist/react-flexbox-grid'
-import BackPage from './BackPage'
+import { Row , Col } from 'react-flexbox-grid/dist/react-flexbox-grid'
 import { useGetSingleData } from '../hooks'
 
 const StoreInfo = ({breweries,location}) => {
@@ -18,8 +17,7 @@ const StoreInfo = ({breweries,location}) => {
     const mapLink = `https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`
 
     return (
-      <>
-      <BackPage />
+      <Row around="xs">
         <Col md={12}>
           <div className="card-no-hover">
               <div className="title-box">
@@ -45,7 +43,7 @@ const StoreInfo = ({breweries,location}) => {
               </div>
           </div>
         </Col>
-      </>
+      </ Row>
     )
   }
 

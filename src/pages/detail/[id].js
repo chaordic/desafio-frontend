@@ -1,6 +1,7 @@
 import { connect } from 'react-redux'
 import Layout from '../../components/Layout'
 import StoreInfo from '../../components/StoreInfo'
+import BackPage from '../../components/BackPage'
 import { startState, useLocation } from '../../hooks'
 
 const Details = ({Urllocation}) => {
@@ -8,6 +9,7 @@ const Details = ({Urllocation}) => {
   useLocation(Urllocation)
   return (
     <Layout>
+      <BackPage />
       <StoreInfo />
     </Layout>
   );

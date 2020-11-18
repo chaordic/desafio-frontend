@@ -1,5 +1,6 @@
 import React from 'react'
 import {breweriesTypes} from '../assets/breweriesTypes'
+import { Row } from 'react-flexbox-grid/dist/react-flexbox-grid'
 import { useRouter } from 'next/router'
 import { useDispatch } from 'react-redux'
 import { getBreweries }  from '../stores/actions'
@@ -21,17 +22,19 @@ const DropDown = () => {
   };
 
   return (
-     <div className="dropdown">
-        <label for="brewariesTypes">Filter: </label>
-          <select name="brewariesTypes" onChange={handleChange} id="brewariesTypes">
-              <option id="0" value="">select...</option>
-              {breweriesTypes.map(brewery => {
-                return (
-                  <option id={brewery.id} value={brewery.name}>{brewery.name}</option>
-                )
-              })}
-          </select>
-     </ div>
+    <Row>
+      <div className="dropdown">
+          <label for="brewariesTypes">Filter: </label>
+            <select name="brewariesTypes" onChange={handleChange} id="brewariesTypes">
+                <option id="0" value="">select...</option>
+                {breweriesTypes.map(brewery => {
+                  return (
+                    <option id={brewery.id} value={brewery.name}>{brewery.name}</option>
+                  )
+                })}
+            </select>
+      </ div>
+     </Row>
   );
 };
 

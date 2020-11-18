@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactPaginate from 'react-paginate'
+import { Row } from 'react-flexbox-grid/dist/react-flexbox-grid'
 import { useRouter } from 'next/router'
 import { useDispatch } from 'react-redux'
 import { getBreweries }  from '../stores/actions'
@@ -20,6 +21,7 @@ const Pagination = () => {
   };
 
   return (
+    <Row around="xs">
       <ReactPaginate
         previousLabel={''}
         nextLabel={''}
@@ -32,6 +34,7 @@ const Pagination = () => {
         pageRangeDisplayed={5}
         onPageChange={pagginationHandler}
       />
+    </Row>
   );
 };
 
