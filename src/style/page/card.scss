@@ -1,3 +1,5 @@
+@import '../mixins/breakpoints';
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
@@ -7,16 +9,23 @@
     margin-top: 8px;
     margin-bottom: 8px;
 
-    &-no-hover{
-      @extend .card;
-      pointer-events: none;
-      flex-grow: 1;
-  }
+    @include lg {
+      min-width: 312px;
+    }
 
     &:hover {
       cursor: pointer;
       box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
     }
+  }
+
+  .card-no-hover {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+    margin-bottom: 8px;
   }
 
   .title-box {
