@@ -1,0 +1,29 @@
+# This is a basic workflow to help you get started with Actions
+name: CI
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+    push:
+        branches: [ master ]
+    pull_request:
+        branches: [ master ]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        strategy:
+          matrix:
+            node-version: [8.x, 10.x, 12.x]
+        steps:
+            - uses: actions/checkout@v2
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v1
+              with:
+                node-version: ${{ matrix.node-version }}
+            - run: npm install
+            - uses: akhileshns/heroku-deploy@v3.3.6
+              with:
+                  heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+                  heroku_app_name: ${{secrets.APP_NAME}}
+                  heroku_email: ${{secrets.EMAIL}}
+                  procfile: "web: npm run start"
