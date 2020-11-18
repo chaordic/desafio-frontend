@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { Grid, Row, Col } from 'react-flexbox-grid/dist/react-flexbox-grid';
+import { Grid, Row, Col } from 'react-flexbox-grid/dist/react-flexbox-grid'
 
 const Card = ({data}) => {
 
@@ -8,7 +8,7 @@ const Card = ({data}) => {
   const {name, city,state,street, postal_code, brewery_type} = data
 
   return (
-    <Col xs={3} sm={3} md={3}>
+    <Col xs={12} sm={4} md={3} lg={3}>
        <Link href={href}>
           <div className="card">
               <div className="title-box">
