@@ -12,7 +12,7 @@ const Pagination = () => {
 
   const pagginationHandler = (page) => {
     currentQuery.page = page.selected + 1
-    dispatch(getBreweries(currentQuery.page))
+    dispatch(getBreweries(currentQuery.page, currentQuery.type))
     router.push({
         pathname: currentPath,
         query: currentQuery,

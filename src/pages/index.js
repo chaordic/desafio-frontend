@@ -9,9 +9,9 @@ import { startState } from '../hooks'
 
 const Index = () => {
   const router = useRouter()
-  const currentQuery = router.query || 1
+  const currentQuery = router.query
 
-  startState(currentQuery.page)
+  startState(currentQuery.page, currentQuery.type)
 
   return (
     <Layout>

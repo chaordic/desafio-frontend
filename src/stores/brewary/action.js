@@ -6,15 +6,11 @@ export const brewariesActionTypes = {
   SINGLE_SUCESS: 'BREWERY_SINGLE_SUCESS',
 }
 
-export const getBreweries = (page) => (dispatch) => {
+export const getBreweries = (page = 1, type) => (dispatch) => {
 
-  let url = `${BREWERIES_URL}`
+  const FolterByType = type ? `&by_type=${type}` : '';
+  const url = `${BREWERIES_URL}?page=${page}${FolterByType}`
 
-  if(page){
-    url = `${url}?page=${page}`
-  }
-
-  console.log(url)
 
   axios.get(url).then(response => {
     const data = response.data;

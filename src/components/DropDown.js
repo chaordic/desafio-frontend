@@ -9,11 +9,9 @@ const DropDown = () => {
   const dispatch = useDispatch()
   const currentPath = router.pathname
   const currentQuery = router.query
-  console.log(">>>>", router)
 
   const handleChange = (event) => {
     const type = event.target.value
-    console.log(type)
     currentQuery.type = type
     dispatch(getBreweries(currentQuery.page, currentQuery.type))
     router.push({
@@ -26,7 +24,7 @@ const DropDown = () => {
      <>
         <label for="brewariesTypes">Filter: </label>
         <select name="brewariesTypes" onChange={handleChange} id="brewariesTypes">
-            <option id="0"></option>
+            <option id="0" value="">select...</option>
             {breweriesTypes.map(brewery => {
               return (
                 <option id={brewery.id} value={brewery.name}>{brewery.name}</option>
