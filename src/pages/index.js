@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Layout from '../components/Layout'
-import ReactPaginate from 'react-paginate'
 import StoresList from '../components/StoresList'
 import Pagination from '../components/Pagination'
 import { useRouter } from 'next/router'

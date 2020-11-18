@@ -1,0 +1,37 @@
+.pagination {
+  display: flex;
+
+  margin: auto {
+    bottom: 1em;
+    top: 1.5em;
+  }
+
+  li {
+    cursor: pointer;
+    a {
+      color: black;
+      padding: 0.5em 0.8em;
+      text-decoration: none;
+      transition: background-color .3s;
+      border: 1px solid #ddd;
+      margin: 0 0.3em;
+      border-radius: 0.3em;
+      cursor: pointer;
+
+      &:hover:not(.active) {
+        background-color: #ddd
+      }
+    }
+
+  }
+  .previous, .next {
+    display: none;
+  }
+  .active {
+    a {
+      background-color: #363636;
+      color: white;
+      border: 1px solid #363636;
+    }
+  }
+}
