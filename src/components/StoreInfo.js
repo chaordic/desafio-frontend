@@ -1,16 +1,15 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { useRouter } from 'next/router'
 import { Row , Col } from 'react-flexbox-grid/dist/react-flexbox-grid'
 import { useGetSingleData } from '../hooks'
 
 const StoreInfo = ({breweries,location}) => {
-  const {query = null} = location
+  const router = useRouter()
+  const currentQuery = router.query
   const { single = null } = breweries
 
-  if(query) {
-    const id = query.id
-    useGetSingleData(id)
-  }
+  useGetSingleData(currentQuery.id)
 
   if(single) {
     const { name, brewery_type, street, city, state, country, website_url, phone, latitude, longitude } = single
