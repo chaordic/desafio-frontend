@@ -21,17 +21,17 @@ const DropDown = () => {
   };
 
   return (
-     <>
+     <div className="dropdown">
         <label for="brewariesTypes">Filter: </label>
-        <select name="brewariesTypes" onChange={handleChange} id="brewariesTypes">
-            <option id="0" value="">select...</option>
-            {breweriesTypes.map(brewery => {
-              return (
-                <option id={brewery.id} value={brewery.name}>{brewery.name}</option>
-              )
-            })}
-        </select>
-     </>
+          <select name="brewariesTypes" onChange={handleChange} id="brewariesTypes">
+              <option id="0" value="">select...</option>
+              {breweriesTypes.map(brewery => {
+                return (
+                  <option id={brewery.id} value={brewery.name}>{brewery.name}</option>
+                )
+              })}
+          </select>
+     </ div>
   );
 };
 
