@@ -1,57 +1,25 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import Layout from '../components/Layout'
 import ReactPaginate from 'react-paginate'
-import Details from '../components/StoresList'
+import StoresList from '../components/StoresList'
+import Pagination from '../components/Pagination'
 import { useRouter } from 'next/router'
-import { startState, useLocation} from '../hooks'
+import { startState } from '../hooks'
 
-const Index = ({urllocation}) => {
+const Index = () => {
   const router = useRouter()
-  const currentPath = router.pathname
-  const currentQuery = router.query
+  const currentQuery = router.query || 1
 
   startState(currentQuery.page)
-  useLocation(urllocation)
-
-  const pagginationHandler = (page) => {
-    currentQuery.page = page.selected + 1
-    router.push({
-        pathname: currentPath,
-        query: currentQuery,
-    })
-  };
 
   return (
     <Layout>
-      <Details />
-      <ReactPaginate
-        previousLabel={''}
-        nextLabel={''}
-        breakClassName={'break-me'}
-        activeClassName={'active'}
-        containerClassName={'pagination'}
-        subContainerClassName={'pages-pagination'}
-        pageCount={3}
-        marginPagesDisplayed={3}
-        pageRangeDisplayed={5}
-        onPageChange={pagginationHandler}
-      />
+      <StoresList />
+      <Pagination />
     </Layout>
   );
 };
-
-export const getServerSideProps = ({ query, params}) => {
-
-  const urllocation = {
-    urllocation: {
-      query: query || '',
-      params: params || '',
-    }
-  }
-
-  return {props: urllocation}
-}
 
 
 export default connect(state => state)(Index);

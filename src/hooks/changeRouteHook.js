@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { useRouter } from 'next/router'
-import { getBreweries }  from '../stores/actions';
 
 export const changeRoute = () => {
   const dispatch = useDispatch()
@@ -11,6 +10,7 @@ export const changeRoute = () => {
   useEffect(() => {
     const handleRouteChange = (url) => {
         console.log(`Route to ${url} was cancelled! ${currentQuery.page}`)
+        router.reload()
     }
 
     router.events.on('routeChangeComplete', handleRouteChange)
