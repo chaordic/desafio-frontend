@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import Layout from '../components/Layout'
 import StoresList from '../components/StoresList'
 import Pagination from '../components/Pagination'
+import DropDown from '../components/DropDown'
 import { useRouter } from 'next/router'
 import { startState } from '../hooks'
 
@@ -14,6 +15,7 @@ const Index = () => {
 
   return (
     <Layout>
+      <DropDown />
       <StoresList />
       <Pagination />
     </Layout>

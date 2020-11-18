@@ -8,7 +8,7 @@ const Pagination = () => {
   const router = useRouter()
   const dispatch = useDispatch()
   const currentPath = router.pathname
-  const currentQuery = router.query || 1
+  const currentQuery = router.query
 
   const pagginationHandler = (page) => {
     currentQuery.page = page.selected + 1

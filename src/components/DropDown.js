@@ -1,0 +1,41 @@
+import React from 'react'
+import {breweriesTypes} from '../assets/breweriesTypes'
+import { useRouter } from 'next/router'
+import { useDispatch } from 'react-redux'
+import { getBreweries }  from '../stores/actions'
+
+const DropDown = () => {
+  const router = useRouter()
+  const dispatch = useDispatch()
+  const currentPath = router.pathname
+  const currentQuery = router.query
+  console.log(">>>>", router)
+
+  const handleChange = (event) => {
+    const type = event.target.value
+    console.log(type)
+    currentQuery.type = type
+    dispatch(getBreweries(currentQuery.page, currentQuery.type))
+    router.push({
+        pathname: currentPath,
+        query: currentQuery,
+    })
+  };
+
+  return (
+     <>
+        <label for="brewariesTypes">Filter: </label>
+        <select name="brewariesTypes" onChange={handleChange} id="brewariesTypes">
+            <option id="0"></option>
+            {breweriesTypes.map(brewery => {
+              return (
+                <option id={brewery.id} value={brewery.name}>{brewery.name}</option>
+              )
+            })}
+        </select>
+     </>
+  );
+};
+
+
+export default DropDown;
