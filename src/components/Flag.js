@@ -10,10 +10,10 @@ const Flag = ({type}) => {
      return <div className="flag blue">{type}</div>;
 
     case "brewpub":
-     return <div className="flag red">{type}</div>;
+     return <div className="flag yellow">{type}</div>;
 
     case "large":
-     return <div className="flag yellow">{type}</div>;
+     return <div className="flag red">{type}</div>;
 
     case "planning":
     return <div className="flag gray">{type}</div>;

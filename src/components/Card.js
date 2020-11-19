@@ -13,7 +13,7 @@ const Card = ({data}) => {
     query: {page: currentQuery.page, type: currentQuery.type},
   }
   return (
-    <Col xs={12} sm={4} md={3} lg={3}>
+    <Col xs={12} sm={6} md={6} lg={3}>
        <Link href={link}>
           <a className="card">
               <div className="title-box">
