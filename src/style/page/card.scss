@@ -11,10 +11,6 @@
     color: inherit;
     text-decoration: inherit;
 
-    @include lg {
-      min-width: 312px;
-    }
-
     &:hover {
       cursor: pointer;
       box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
@@ -35,14 +31,33 @@
       }
     }
 
+    @include sm {
+      .card-box {
+        span {
+        font-size: 0.8em;
+
+        a {
+          line-break: anywhere;
+        }
+        }
+      }
+    }
+
   }
 
   .title-box {
     padding: 20px 20px;
 
     .title {
-      font-size: 34px;
+      font-size: 2em;
       font-weight: 500;
+    }
+
+    @include sm {
+      .title {
+        font-size: 1.4em;
+        font-weight: 500;
+      }
     }
 
   }
