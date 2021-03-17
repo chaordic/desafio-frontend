@@ -11,6 +11,7 @@ import { ButtonComponent } from './shared-components/layout/button/button.compon
 import { BrewerieDetailsComponent } from './pages/brewerie-details/brewerie-details.component';
 import { FilterComponent } from './shared-components/util/filter/filter.component';
 import { PaginatorComponent } from './shared-components/util/paginator/paginator.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PaginatorComponent } from './shared-components/util/paginator/paginator
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
