@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-filter',
+  selector: 'lnx-filter',
   templateUrl: './filter.component.html',
   styleUrls: ['./filter.component.scss']
 })
