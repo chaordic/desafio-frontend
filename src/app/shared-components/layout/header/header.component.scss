@@ -1,0 +1,17 @@
+.header-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 140px;
+    min-height: 150px;
+    color: white;
+    background-color: #221d1e;
+    .title{
+        font-size: 32px;
+        font-weight: 700;
+    }
+    .sub-title{
+        font-size: 20px;
+        font-weight: 400;
+    }
+}
