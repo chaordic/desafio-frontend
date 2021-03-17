@@ -9,6 +9,7 @@ import { FooterComponent } from './shared-components/footer/footer.component';
 import { CardComponent } from './shared-components/card/card.component';
 import { ButtonComponent } from './shared-components/button/button.component';
 import { BrewerieDetailsComponent } from './pages/brewerie-details/brewerie-details.component';
+import { FilterComponent } from './shared-components/filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BrewerieDetailsComponent } from './pages/brewerie-details/brewerie-deta
     FooterComponent,
     CardComponent,
     ButtonComponent,
-    BrewerieDetailsComponent
+    BrewerieDetailsComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
