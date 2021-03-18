@@ -6,7 +6,7 @@
         <p class="card-text">{{data?.country}}</p>
     </div>
     <div class="card-footer">
-        <div class="type">{{data?.brewery_type}}</div>
+        <div class="type" [style.background-color]="getBackground()">{{data?.brewery_type}}</div>
     </div>
 </div>
 
