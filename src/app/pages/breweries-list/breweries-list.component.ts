@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { BreweriesService } from 'src/app/services/breweries-service/breweries.service';
 import { GlobalService } from 'src/app/services/global-service/global.service';
 import { AppState } from 'src/app/state';
 
@@ -14,7 +13,6 @@ export class BreweriesListComponent implements OnInit {
 
   constructor(
     private router: Router, 
-    private breweries: BreweriesService,
     private store: Store<AppState>,
     private global: GlobalService) { }
 
@@ -24,7 +22,7 @@ export class BreweriesListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getState();
-    this.breweries.getBreweriesByType("breweries" + this.mountQueryString())
+    this.global.filterBreweries('all');
   }
 
   getState() {
@@ -32,13 +30,6 @@ export class BreweriesListComponent implements OnInit {
       const { breweriesList, selectedFilter } = state.newAppState;
       this.state = { breweriesList, selectedFilter };
     }).subscribe();
-  }
-
-  mountQueryString(){
-    let qString = "";
-    if(this.state.selectedFilter !== 'all')
-      qString = "?by_type=" + this.state.selectedFilter
-    return qString;
   }
 
   navigateToDetails(){
