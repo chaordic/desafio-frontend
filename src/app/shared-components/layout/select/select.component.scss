@@ -9,12 +9,15 @@ select{
     -moz-appearance:none; /* Firefox */
     -webkit-appearance:none; /* Safari and Chrome */
     appearance:none;
+    background-color: transparent;
     cursor: pointer;
 }
 select:focus{
     outline: none;
 }
 i{
+    position: relative;
+    z-index: -1;
     margin-left: -30px;
     font-size: 13px;
     font-weight: 900;
