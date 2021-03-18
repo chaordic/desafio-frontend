@@ -3,7 +3,7 @@
     <div class="main-padding">
         <lnx-filter></lnx-filter>
         <div class="card-container">
-            <lnx-card *ngFor="let tmp of temp" (click)="navigateToDetails()"></lnx-card>
+            <lnx-card *ngFor="let brewerie of state?.breweriesList" (click)="navigateToDetails()"></lnx-card>
         </div>
         <lnx-paginator></lnx-paginator>
     </div>

@@ -14,6 +14,8 @@ import { PaginatorComponent } from './shared-components/util/paginator/paginator
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SelectComponent } from './shared-components/layout/select/select.component';
 import { HttpClientModule } from '@angular/common/http';
+import { StoreModule } from '@ngrx/store';
+import { reducer } from '../app/state/state.reducer';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot({newAppState: reducer}),
   ],
   providers: [],
   bootstrap: [AppComponent]
