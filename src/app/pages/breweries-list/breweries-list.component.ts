@@ -29,7 +29,7 @@ export class BreweriesListComponent implements OnInit {
     this.stateSubscription = this.store.select((state: any) => {
       const { breweriesList, selectedFilter, page } = state.newAppState;
       this.state = { breweriesList, selectedFilter, page };
-      this.paginatedBreweries = this.global.separateArrayForPagination(this.state.breweriesList, 6);
+      this.paginatedBreweries = this.global.separateArrayForPagination(this.state.breweriesList, 8);
     }).subscribe();
   }
 

@@ -25,9 +25,9 @@ export class GlobalService {
     let paginatedArray = <any>[];
     let page = 0;
     let cont = 0;
-    array.forEach((element) => {
+    array.forEach((element, index) => {
       tempArray.push(element);
-      if (cont === itemsPerPage - 1 && page < 3) {
+      if ((cont === itemsPerPage - 1 && page < 3) || !array[index + 1]) {
         if (!paginatedArray[page])
           paginatedArray[page] = [];
         paginatedArray[page] = tempArray
@@ -37,6 +37,8 @@ export class GlobalService {
       }
       cont++;
     });
+    //console.log(paginatedArray);
+    //console.log(array);
     return paginatedArray;
   }
 }

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { GlobalService } from 'src/app/services/global-service/global.service';
 import { AppState } from 'src/app/state';
-import { fillSelectedFilter } from 'src/app/state/state.actions';
+import { fillPage, fillSelectedFilter } from 'src/app/state/state.actions';
 
 @Component({
   selector: 'lnx-filter',
@@ -21,6 +21,7 @@ export class FilterComponent implements OnInit {
   
   updateFilter(event: any){
     this.store.dispatch(fillSelectedFilter({ payload: event}))
+    this.store.dispatch(fillPage({ payload: 1}))
     this.global.filterBreweries(event);
   }
 
