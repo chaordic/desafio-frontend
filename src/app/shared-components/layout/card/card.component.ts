@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Brewerie } from 'src/app/models/brewerie.model';
 
 @Component({
   selector: 'lnx-card',
@@ -8,10 +9,10 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CardComponent implements OnInit {
 
   @Input() size: String = "default";
+  @Input() data!: Brewerie;
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }
