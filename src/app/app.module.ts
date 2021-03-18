@@ -13,6 +13,7 @@ import { FilterComponent } from './shared-components/util/filter/filter.componen
 import { PaginatorComponent } from './shared-components/util/paginator/paginator.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SelectComponent } from './shared-components/layout/select/select.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { SelectComponent } from './shared-components/layout/select/select.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
