@@ -16,6 +16,7 @@ import { SelectComponent } from './shared-components/layout/select/select.compon
 import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
 import { reducer } from '../app/state/state.reducer';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { reducer } from '../app/state/state.reducer';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    FormsModule,
     HttpClientModule,
     StoreModule.forRoot({newAppState: reducer}),
   ],

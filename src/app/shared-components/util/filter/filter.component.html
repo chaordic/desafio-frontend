@@ -1,4 +1,5 @@
 <div class="filter-container">
-    <span class="mr-3">Filter:</span> 
-    <lnx-select [options]="['micro', 'brewpub']" [chevronColor]="'#3273dc'"></lnx-select>
+    <span class="mr-3">Filter:</span>
+    <lnx-select [options]="['all', 'micro', 'brewpub', 'contract', 'regional']" [chevronColor]="'#3273dc'"
+        [selected]="'all'" (changed)="updateFilter($event)"></lnx-select>
 </div>

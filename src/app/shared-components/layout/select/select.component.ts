@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'lnx-select',
@@ -9,10 +9,22 @@ export class SelectComponent implements OnInit {
 
   @Input() options: String[] = [];
   @Input() chevronColor: String = "";
+  @Input() selected: String = "";
+  @Output() changed = new EventEmitter();
+
+  selectedOption: any;
 
   constructor() { }
 
   ngOnInit(): void {
+    if(this.selected)
+      this.selectedOption = this.selected;
+    else
+      this.selectedOption = this.options[0];
+  }
+
+  emitChange(){
+    this.changed.emit(this.selectedOption);
   }
 
 }

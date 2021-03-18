@@ -21,15 +21,19 @@ export class BreweriesListComponent implements OnInit {
   state: any;
 
   ngOnInit(): void {
-    this.breweries.getBreweriesByType("breweries")
     this.getState();
+    this.breweries.getBreweriesByType("breweries") //+ this.mountQueryString())
   }
 
   getState() {
     this.stateSubscription = this.store.select((state: any) => {
-      const { breweriesList } = state.newAppState;
-      this.state = { breweriesList };
+      const { breweriesList, selectedFilter } = state.newAppState;
+      this.state = { breweriesList, selectedFilter };
     }).subscribe();
+  }
+
+  mountQueryString(){
+    
   }
 
   navigateToDetails(){
