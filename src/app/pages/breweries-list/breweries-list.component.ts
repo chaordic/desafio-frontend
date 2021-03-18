@@ -16,9 +16,9 @@ export class BreweriesListComponent implements OnInit {
     private store: Store<AppState>,
     private global: GlobalService) { }
 
-  temp = [1,2,3,4,5,6,7,8];
   stateSubscription: any;
   state: any;
+  paginatedBreweries = [];
 
   ngOnInit(): void {
     this.getState();
@@ -27,8 +27,9 @@ export class BreweriesListComponent implements OnInit {
 
   getState() {
     this.stateSubscription = this.store.select((state: any) => {
-      const { breweriesList, selectedFilter } = state.newAppState;
-      this.state = { breweriesList, selectedFilter };
+      const { breweriesList, selectedFilter, page } = state.newAppState;
+      this.state = { breweriesList, selectedFilter, page };
+      this.paginatedBreweries = this.global.separateArrayForPagination(this.state.breweriesList, 6);
     }).subscribe();
   }
 
