@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SelectComponent implements OnInit {
 
   @Input() options: String[] = [];
+  @Input() chevronColor: String = "";
 
   constructor() { }
 

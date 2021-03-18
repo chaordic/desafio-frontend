@@ -1,4 +1,6 @@
 <lnx-header></lnx-header>
-<lnx-button [icon]="'fa-check'" [label]="'Back'"></lnx-button>
-<lnx-card></lnx-card>
+<div class="main-padding">
+    <lnx-button [icon]="'fa-chevron-left'" [label]="'Back'" [class]="'mt-2'" (click)="navigateToList()"></lnx-button>
+    <lnx-card [size]="'big'"></lnx-card>
+</div>
 <lnx-footer></lnx-footer>
