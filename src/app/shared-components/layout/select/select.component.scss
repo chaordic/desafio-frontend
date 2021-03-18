@@ -1,0 +1,12 @@
+select{
+    min-height: 38px;
+    border: 1px solid #dcdcdc;
+    font-size: 16px;
+    padding-left: 5px;
+    color: #757575;
+    border-radius: 4px;
+}
+
+select:focus{
+    outline: none;
+}

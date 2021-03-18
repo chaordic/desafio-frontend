@@ -12,6 +12,7 @@ import { BrewerieDetailsComponent } from './pages/brewerie-details/brewerie-deta
 import { FilterComponent } from './shared-components/util/filter/filter.component';
 import { PaginatorComponent } from './shared-components/util/paginator/paginator.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SelectComponent } from './shared-components/layout/select/select.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ButtonComponent,
     BrewerieDetailsComponent,
     FilterComponent,
-    PaginatorComponent
+    PaginatorComponent,
+    SelectComponent
   ],
   imports: [
     BrowserModule,
