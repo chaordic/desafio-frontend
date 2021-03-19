@@ -20,8 +20,8 @@ export class FilterComponent implements OnInit {
   ngOnInit(): void {}
   
   updateFilter(event: any){
-    this.store.dispatch(fillSelectedFilter({ payload: event}))
-    this.store.dispatch(fillPage({ payload: 1}))
+    this.store.dispatch(fillSelectedFilter({ payload: event}));
+    this.store.dispatch(fillPage({ payload: 0}));
     this.global.filterBreweries(event);
   }
 

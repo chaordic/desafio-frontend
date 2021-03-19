@@ -13,9 +13,7 @@ export class CardComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-    console.log(this.data);
-  }
+  ngOnInit(): void {}
 
   getBackground(){
     switch (this.data.brewery_type) {

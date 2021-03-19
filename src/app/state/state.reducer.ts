@@ -3,7 +3,7 @@ import { AppState } from './index';
 export const initialState: AppState = {
     breweriesList: [],
     selectedFilter: 'all',
-    page: 1,
+    page: 0,
     selectedBrewerie: null
 };
 
