@@ -36,6 +36,7 @@ export class BreweriesListComponent implements OnInit {
 
   navigateToDetails(brewerie: Brewerie){
     this.store.dispatch(fillSelectedBrewerie({ payload: brewerie}));
+    sessionStorage.setItem('selectedBrewerie', JSON.stringify(brewerie));
     this.router.navigate(['details']);
   }
 
