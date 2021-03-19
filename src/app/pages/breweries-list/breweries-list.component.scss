@@ -1,11 +1,21 @@
 .breweries-list-container{
-    .card-container{
+    .main-content{
         display: flex;
-        flex-wrap: wrap;
-        align-content: flex-start;
-        lnx-card{
-            max-width: 316px;
-            margin-right: 13px;
+        justify-content: center;
+        min-height: calc(100vh - 333px);
+        .card-container{
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            lnx-card{
+                max-width: 316px;
+                margin-right: 13px;
+            }
+        }
+        lnx-paginator{
+            display: flex;
+            justify-content: center;
+            margin-top: auto;
         }
     }
 }

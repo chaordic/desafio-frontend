@@ -1,11 +1,14 @@
 <div class="breweries-list-container">
     <lnx-header></lnx-header>
-    <div class="main-padding">
-        <lnx-filter></lnx-filter>
-        <div class="card-container">
-            <lnx-card *ngFor="let brewerie of paginatedBreweries[state?.page]" [data]="brewerie" (click)="navigateToDetails()"></lnx-card>
+    <div class="main-content">
+        <div class="content-size d-flex flex-column">
+            <lnx-filter></lnx-filter>
+            <div class="card-container">
+                <lnx-card *ngFor="let brewerie of paginatedBreweries[state?.page]" [data]="brewerie"
+                    (click)="navigateToDetails()"></lnx-card>
+            </div>
+            <lnx-paginator></lnx-paginator>
         </div>
-        <lnx-paginator></lnx-paginator>
     </div>
     <lnx-footer></lnx-footer>
 </div>
