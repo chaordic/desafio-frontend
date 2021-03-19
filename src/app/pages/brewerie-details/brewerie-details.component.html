@@ -1,4 +1,9 @@
 <lnx-header></lnx-header>
-<lnx-button [icon]="'fa-chevron-left'" [label]="'Back'" [class]="'mt-2'" (click)="navigateToList()"></lnx-button>
-<lnx-card [size]="'big'"></lnx-card>
+<div class="main-content">
+    <div class="content-size d-flex flex-column">
+        <lnx-button [icon]="'fa-chevron-left'" [label]="'Back'" [class]="'mt-2'" (click)="navigateToList()">
+        </lnx-button>
+        <lnx-card [size]="'big'" [data]="state?.selectedBrewerie"></lnx-card>
+    </div>
+</div>
 <lnx-footer></lnx-footer>

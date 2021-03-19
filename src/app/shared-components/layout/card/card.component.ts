@@ -13,25 +13,22 @@ export class CardComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.data);
+  }
 
   getBackground(){
     switch (this.data.brewery_type) {
       case 'micro':
         return "#00d1b2";
-        break;
       case 'contract':
         return '#363636';
-        break;
       case 'brewpub':
         return '#ffdd57';
-        break;
       case 'regional':
         return '#3273dc';
-        break;
       default:
         return "#00d1b2";
-        break;
     }
   }
 

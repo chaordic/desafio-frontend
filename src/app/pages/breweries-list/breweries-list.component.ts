@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
+import { Brewerie } from 'src/app/models/brewerie.model';
 import { GlobalService } from 'src/app/services/global-service/global.service';
 import { AppState } from 'src/app/state';
+import { fillSelectedBrewerie } from 'src/app/state/state.actions';
 
 @Component({
   selector: 'lnx-breweries-list',
@@ -33,7 +35,8 @@ export class BreweriesListComponent implements OnInit {
     }).subscribe();
   }
 
-  navigateToDetails(){
+  navigateToDetails(brewerie: Brewerie){
+    this.store.dispatch(fillSelectedBrewerie({ payload: brewerie}));
     this.router.navigate(['details']);
   }
 

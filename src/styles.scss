@@ -11,6 +11,11 @@ body{
     max-width: 1320px;
     width: 1320px;
 }
+.main-content{
+    display: flex;
+    justify-content: center;
+    min-height: calc(100vh - 333px);
+}
 
 .flex-center{
     display: flex;
@@ -19,11 +24,11 @@ body{
 }
 
 lnx-card{
-    cursor: pointer;
     margin-bottom: 13px;
 }
 
 button.btn:focus{
     box-shadow: none;
 }
+
 

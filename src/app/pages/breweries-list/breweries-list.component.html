@@ -5,7 +5,7 @@
             <lnx-filter></lnx-filter>
             <div class="card-container">
                 <lnx-card *ngFor="let brewerie of paginatedBreweries[state?.page]" [data]="brewerie"
-                    (click)="navigateToDetails()"></lnx-card>
+                    (click)="navigateToDetails(brewerie)"></lnx-card>
             </div>
             <lnx-paginator></lnx-paginator>
         </div>

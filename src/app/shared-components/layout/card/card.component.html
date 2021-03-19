@@ -1,11 +1,23 @@
-<div class="card">
-    <div class="card-header">{{data?.name}}</div>
-    <div class="card-body">
+<div class="card" [class.big]="size === 'big'">
+    <div class="card-header">MadTree Brewing</div>
+    <div class="card-body" *ngIf="size !== 'big'">
         <p class="card-text">{{data?.street}}</p>
         <p class="card-text">{{data?.city}} {{data?.state}} - {{data?.postal_code}}</p>
         <p class="card-text">{{data?.country}}</p>
     </div>
-    <div class="card-footer">
+    <div class="card-body" *ngIf="size === 'big'">
+        <p class="card-text">Type: {{data?.brewery_type}}</p>
+        <p class="card-text">Street: {{data?.street}}</p>
+        <p class="card-text">City: {{data?.city}}</p>
+        <p class="card-text">State: {{data?.state}}</p>
+        <p class="card-text">Postal code: {{data?.postal_code}}</p>
+        <p class="card-text">Country: {{data?.country}}</p>
+        <p class="card-text">Website: <a [href]="data?.website_url" target="blank">{{data?.website_url}}</a></p>
+        <p class="card-text">Phone: {{data?.phone}}</p>
+        <p class="card-text">Open in maps: <a>{{data?.latitude}},{{data?.longitude}}</a></p>
+        
+    </div>
+    <div class="card-footer" *ngIf="size !== 'big'">
         <div class="type" [style.background-color]="getBackground()">{{data?.brewery_type}}</div>
     </div>
 </div>
