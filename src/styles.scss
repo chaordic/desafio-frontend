@@ -36,10 +36,24 @@ button.btn:focus{
         width: 992px;
     }
 }
-  @media screen and (max-width: 1120px) {
+@media screen and (max-width: 1120px) {
     .content-size{
         width: 660px;
     }
+}
+@media screen and (max-width: 790px) {
+    .content-size{
+        width: 314px;
+    }
+}
+@media screen and (max-width: 430px) {
+    .header-container{
+        padding: 0 50px;
+        min-width: 314px;
+    }
+}
+@media screen and (max-width: 400px) {
+
 }
 
 
