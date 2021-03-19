@@ -1,5 +1,5 @@
 <div class="card" [class.big]="size === 'big'">
-    <div class="card-header">MadTree Brewing</div>
+    <div class="card-header">{{data?.name}}</div>
     <div class="card-body" *ngIf="size !== 'big'">
         <p class="card-text">{{data?.street}}</p>
         <p class="card-text">{{data?.city}} {{data?.state}} - {{data?.postal_code}}</p>
