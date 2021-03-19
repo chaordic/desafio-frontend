@@ -14,7 +14,11 @@
         <p class="card-text">Country: {{data?.country}}</p>
         <p class="card-text">Website: <a [href]="data?.website_url" target="blank">{{data?.website_url}}</a></p>
         <p class="card-text">Phone: {{data?.phone}}</p>
-        <p class="card-text">Open in maps: <a>{{data?.latitude}},{{data?.longitude}}</a></p>
+        <p class="card-text">Open in maps: 
+            <a [href]="global.generateMapsLink(data.latitude, data.longitude)" target="blank" *ngIf="data?.latitude && data?.longitude">
+                {{data?.latitude}},{{data?.longitude}}
+            </a>
+        </p>
         
     </div>
     <div class="card-footer" *ngIf="size !== 'big'">

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Brewerie } from 'src/app/models/brewerie.model';
+import { GlobalService } from 'src/app/services/global-service/global.service';
 
 @Component({
   selector: 'lnx-card',
@@ -11,7 +12,7 @@ export class CardComponent implements OnInit {
   @Input() size: String = "default";
   @Input() data!: Brewerie;
 
-  constructor() { }
+  constructor(public global: GlobalService) { }
 
   ngOnInit(): void {}
 

@@ -37,8 +37,10 @@ export class GlobalService {
       }
       cont++;
     });
-    //console.log(paginatedArray);
-    //console.log(array);
     return paginatedArray;
+  }
+
+  generateMapsLink(latitude: String, longitude: String){
+    return "http://www.google.com/maps/place/" + latitude + "," + longitude
   }
 }
