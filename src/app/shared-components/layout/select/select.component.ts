@@ -19,8 +19,6 @@ export class SelectComponent implements OnInit {
   ngOnInit(): void {
     if(this.selected)
       this.selectedOption = this.selected;
-    else
-      this.selectedOption = this.options[0];
   }
 
   emitChange(){

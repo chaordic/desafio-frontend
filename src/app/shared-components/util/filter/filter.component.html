@@ -1,5 +1,4 @@
 <div class="filter-container">
     <span class="mr-3">Filter:</span>
-    <lnx-select [options]="types" [chevronColor]="'#3273dc'"
-        [selected]="'all'" (changed)="updateFilter($event)"></lnx-select>
+    <lnx-select [options]="types" [selected]="state?.selectedFilter" [chevronColor]="'#3273dc'" (changed)="updateFilter($event)"></lnx-select>
 </div>

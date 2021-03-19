@@ -11,13 +11,25 @@ import { fillPage, fillSelectedFilter } from 'src/app/state/state.actions';
 })
 export class FilterComponent implements OnInit {
 
+  stateSubscription: any;
+  state: any;
   types = ['all', 'micro', 'nano', 'large', 'brewpub', 'contract', 'regional', 'planning', 'bar', 'proprietor', 'closed'];
 
   constructor(
     private store: Store<AppState>,
     private global: GlobalService) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getState();
+    this.global.filterBreweries();
+  }
+
+  getState() {
+    this.stateSubscription = this.store.select((state: any) => {
+      const { selectedFilter } = state.newAppState;
+      this.state = { selectedFilter };
+    }).subscribe();
+  }
   
   updateFilter(event: any){
     this.store.dispatch(fillSelectedFilter({ payload: event}));

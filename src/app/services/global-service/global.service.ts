@@ -9,7 +9,7 @@ export class GlobalService {
 
   constructor(private breweries: BreweriesService) { }
 
-  filterBreweries(selectedFilter: String) {
+  filterBreweries(selectedFilter: String = "") {
     this.breweries.getBreweriesByType("breweries" + this.mountQueryString(selectedFilter))
   }
 

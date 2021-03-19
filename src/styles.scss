@@ -31,4 +31,15 @@ button.btn:focus{
     box-shadow: none;
 }
 
+@media screen and (max-width: 1450px) {
+    .content-size{
+        width: 992px;
+    }
+}
+  @media screen and (max-width: 1120px) {
+    .content-size{
+        width: 660px;
+    }
+}
+
 

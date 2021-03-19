@@ -24,7 +24,6 @@ export class BreweriesListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getState();
-    this.global.filterBreweries('all');
   }
 
   getState() {
