@@ -32,13 +32,13 @@ export class BrewerieDetailsComponent implements OnInit {
     }).subscribe();
   }
 
-  navigateToList(){
-    this.router.navigate(['/']);
-  }
-
   getBrewerieBySession(){
     let brewerie: any = sessionStorage.getItem('selectedBrewerie');
     this.store.dispatch(fillSelectedBrewerie({ payload: JSON.parse(brewerie)}));
+  }
+
+  navigateToList(){
+    this.router.navigate(['/']);
   }
 
 }
