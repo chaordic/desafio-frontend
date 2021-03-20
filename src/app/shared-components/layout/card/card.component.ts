@@ -14,9 +14,12 @@ export class CardComponent implements OnInit {
 
   constructor(public global: GlobalService) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
-  getBackground(){
+  getBackground() {
+    if (!this.data || this.data.brewery_type)
+      return false;
+
     switch (this.data.brewery_type) {
       case 'micro':
         return "#00d1b2";
@@ -30,5 +33,4 @@ export class CardComponent implements OnInit {
         return "#00d1b2";
     }
   }
-
 }

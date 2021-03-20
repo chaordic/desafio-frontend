@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { StoreModule } from '@ngrx/store';
 
 import { PaginatorComponent } from './paginator.component';
 
@@ -8,6 +9,7 @@ describe('PaginatorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [StoreModule.forRoot({})],
       declarations: [ PaginatorComponent ]
     })
     .compileComponents();

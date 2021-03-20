@@ -1,4 +1,6 @@
+import { HttpClient, HttpHandler } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { StoreModule } from '@ngrx/store';
 
 import { FilterComponent } from './filter.component';
 
@@ -8,6 +10,8 @@ describe('FilterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [StoreModule.forRoot({})],
+      providers: [HttpClient, HttpHandler],
       declarations: [ FilterComponent ]
     })
     .compileComponents();

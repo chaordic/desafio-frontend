@@ -21,7 +21,8 @@ export class FilterComponent implements OnInit {
 
   ngOnInit(): void {
     this.getState();
-    this.global.filterBreweries(this.state.selectedFilter);
+    if(this.state && this.state.selectedFilter)
+      this.global.filterBreweries(this.state.selectedFilter);
   }
 
   getState() {
