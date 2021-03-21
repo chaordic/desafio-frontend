@@ -22,9 +22,7 @@ export class PaginatorComponent implements OnInit {
     this.getState();
   }
 
-  ngOnChanges() {
-    console.log(this.pagedArray);
-  }
+  ngOnChanges() {}
 
   getState() {
     this.stateSubscription = this.store.select((state: any) => {
