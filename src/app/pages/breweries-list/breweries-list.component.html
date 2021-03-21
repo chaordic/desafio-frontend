@@ -7,7 +7,7 @@
                 <lnx-card *ngFor="let brewerie of paginatedBreweries[state?.page]" [data]="brewerie"
                     (click)="navigateToDetails(brewerie)"></lnx-card>
             </div>
-            <lnx-paginator></lnx-paginator>
+            <lnx-paginator *ngIf="paginatedBreweries" [pagedArray]="paginatedBreweries"></lnx-paginator>
         </div>
     </div>
     <lnx-footer></lnx-footer>

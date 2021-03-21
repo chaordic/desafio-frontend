@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "node server",
-    "build": "ng build --prod --source-map",
+    "build": "ng build --prod",
     "postbuild": "gulp compress",
     "test": "ng test",
     "lint": "ng lint",

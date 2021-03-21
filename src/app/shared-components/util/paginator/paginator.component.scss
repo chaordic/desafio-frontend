@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 13px;
-    div{
+    .box{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -16,7 +16,7 @@
         background-color: transparent;
         cursor: pointer;
     }
-    div.selected{
+    .box.selected{
         background-color: #363636;
         color: white;
     }

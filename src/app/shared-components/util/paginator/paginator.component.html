@@ -1,5 +1,7 @@
 <div class="paginator-container">
-    <div *ngFor="let box of boxes" [class.selected]="box === state?.page" (click)="changePage(box)">
-        {{box + 1}}
+    <div *ngFor="let box of boxes">
+        <div class="box" *ngIf="pagedArray.length > box" [class.selected]="box === state?.page" (click)="changePage(box)">
+            {{box + 1}}
+        </div>
     </div>
 </div>

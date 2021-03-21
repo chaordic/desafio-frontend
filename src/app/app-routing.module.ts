@@ -6,7 +6,7 @@ import { BreweriesListComponent } from './pages/breweries-list/breweries-list.co
 
 const routes: Routes = [
   { path: '', component: BreweriesListComponent },
-  { path: 'details', component: BrewerieDetailsComponent }
+  { path: ':id/details', component: BrewerieDetailsComponent }
 ];
 
 @NgModule({
