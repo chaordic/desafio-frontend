@@ -4,49 +4,12 @@
 body{
     margin: 0;
     font-family: 'Domine', serif;
+    font-display: optional;
 }
 
 .content-size{
     max-width: 1320px;
     width: 1320px;
-}
-.main-content{
-    display: flex;
-    justify-content: center;
-    min-height: calc(100vh - 333px);
-}
-
-.flex-center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-lnx-card{
-    margin-bottom: 13px;
-}
-
-button.btn:focus{
-    box-shadow: none;
-}
-
-.card{
-    display: flex;
-    flex-direction: column;
-    .card-body, .card-footer{
-        padding-left: 20px;
-        padding-right: 20px;
-        line-height: 24px;
-        p{
-            margin-top: 0;
-        }
-    }
-    .card-body{
-        padding-top: 20px;
-    }
-    .card-footer{
-        margin-top: auto;
-    }
 }
 
 @media screen and (max-width: 1450px) {
@@ -69,9 +32,6 @@ button.btn:focus{
         padding: 0 50px;
         min-width: 314px;
     }
-}
-@media screen and (max-width: 400px) {
-
 }
 
 

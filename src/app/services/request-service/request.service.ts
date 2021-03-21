@@ -22,7 +22,8 @@ export class RequestService {
 
   getHeader(): any{
     const headers = new HttpHeaders()
-    .set('Accept-Encoding', 'gzip, compress, br')
+    .set('Accept-Encoding', 'gzip')
+    .set('Content-Encoding', 'gzip')
     return headers;
   }
 

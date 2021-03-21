@@ -3,6 +3,9 @@
     justify-content: center;
     margin-bottom: 13px;
     div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-size: 16px;
         border: 1px solid #dddddd;
         min-width: 40px;

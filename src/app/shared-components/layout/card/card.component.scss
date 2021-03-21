@@ -1,9 +1,12 @@
 .card{
+    display: flex;
+    flex-direction: column;
     min-width: 316px;
     min-height: 316px;
     padding: 0;
     border: 1px solid #ededed;
     border-radius: 10px;
+    margin-bottom: 13px;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.23);
     -webkit-box-shadow:0 5px 8px 0 rgba(0, 0, 0, 0.23);
     -moz-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.23);
@@ -19,6 +22,7 @@
         font-size: 16px;
         color:#6e6e6e;
         font-weight: 600;
+        padding-top: 20px;
         p{
             margin-bottom: 0;
             a{
@@ -30,10 +34,19 @@
         background-color: white;
         border-bottom: 0;
     }
+    .card-body, .card-footer{
+        padding-left: 20px;
+        padding-right: 20px;
+        line-height: 24px;
+        p{
+            margin-top: 0;
+        }
+    }
     .card-footer{
         border-top: 2px solid #ededed;
         padding-top: 7px;
         padding-bottom: 7px;
+        margin-top: auto;
         .type{
             font-size: 12px;
             border-radius: 5px;
