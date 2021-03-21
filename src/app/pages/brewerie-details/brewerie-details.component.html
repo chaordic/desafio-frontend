@@ -1,6 +1,6 @@
 <lnx-header></lnx-header>
 <div class="main-content">
-    <div class="content-size d-flex flex-column">
+    <div class="content-size">
         <lnx-button [icon]="'fa-chevron-left'" [label]="'Back'" [class]="'mt-2'" (click)="navigateToList()">
         </lnx-button>
         <lnx-card *ngIf="state && state?.selectedBrewerie" [size]="'big'" [data]="state?.selectedBrewerie"></lnx-card>
