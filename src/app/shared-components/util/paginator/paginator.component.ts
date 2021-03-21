@@ -15,25 +15,27 @@ export class PaginatorComponent implements OnInit {
 
   stateSubscription: any;
   state: any;
-  boxes = [0,1,2];
+  boxes = [0, 1, 2];
   @Input() pagedArray: any[] = [];
 
   ngOnInit(): void {
     this.getState();
   }
 
-  ngOnChanges(){
+  ngOnChanges() {
     console.log(this.pagedArray);
   }
 
   getState() {
     this.stateSubscription = this.store.select((state: any) => {
-      const { page } = state.newAppState;
-      this.state = { page };
+      if (state && state.newAppState) {
+        const { page } = state.newAppState;
+        this.state = { page };
+      }
     }).subscribe();
   }
 
-  changePage(box: number){
-    this.store.dispatch(fillPage({ payload: box}))
+  changePage(box: number) {
+    this.store.dispatch(fillPage({ payload: box }))
   }
 }
