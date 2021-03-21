@@ -17,7 +17,7 @@ export class CardComponent implements OnInit {
   ngOnInit(): void { }
 
   getBackground() {
-    if (!this.data || this.data.brewery_type)
+    if (!this.data || !this.data.brewery_type)
       return false;
 
     switch (this.data.brewery_type) {
