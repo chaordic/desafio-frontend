@@ -21,20 +21,22 @@ export class FilterComponent implements OnInit {
 
   ngOnInit(): void {
     this.getState();
-    if(this.state && this.state.selectedFilter)
+    if (this.state && this.state.selectedFilter)
       this.global.filterBreweries(this.state.selectedFilter);
   }
 
   getState() {
     this.stateSubscription = this.store.select((state: any) => {
-      const { selectedFilter } = state.newAppState;
-      this.state = { selectedFilter };
+      if (state && state.newAppState) {
+        const { selectedFilter } = state.newAppState;
+        this.state = { selectedFilter };
+      }
     }).subscribe();
   }
-  
-  updateFilter(event: any){
-    this.store.dispatch(fillSelectedFilter({ payload: event}));
-    this.store.dispatch(fillPage({ payload: 0}));
+
+  updateFilter(event: any) {
+    this.store.dispatch(fillSelectedFilter({ payload: event }));
+    this.store.dispatch(fillPage({ payload: 0 }));
     this.global.filterBreweries(event);
   }
 

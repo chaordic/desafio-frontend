@@ -14,7 +14,7 @@ import { fillSelectedBrewerie } from 'src/app/state/state.actions';
 export class BreweriesListComponent implements OnInit {
 
   constructor(
-    private router: Router, 
+    private router: Router,
     private store: Store<AppState>,
     private global: GlobalService) { }
 
@@ -28,15 +28,17 @@ export class BreweriesListComponent implements OnInit {
 
   getState() {
     this.stateSubscription = this.store.select((state: any) => {
-      const { breweriesList, selectedFilter, page } = state.newAppState;
-      this.state = { breweriesList, selectedFilter, page };
-      if(this.state && this.state.breweriesList)
-        this.paginatedBreweries = this.global.separateArrayForPagination(this.state.breweriesList, 8);
+      if (state && state.newAppState) {
+        const { breweriesList, selectedFilter, page } = state.newAppState;
+        this.state = { breweriesList, selectedFilter, page };
+        if (this.state && this.state.breweriesList)
+          this.paginatedBreweries = this.global.separateArrayForPagination(this.state.breweriesList, 8);
+      }
     }).subscribe();
   }
 
-  navigateToDetails(brewerie: Brewerie){
-    this.store.dispatch(fillSelectedBrewerie({ payload: brewerie}));
+  navigateToDetails(brewerie: Brewerie) {
+    this.store.dispatch(fillSelectedBrewerie({ payload: brewerie }));
     sessionStorage.setItem('selectedBrewerie', JSON.stringify(brewerie));
     this.router.navigate(['details']);
   }

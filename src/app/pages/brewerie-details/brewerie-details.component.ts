@@ -25,10 +25,12 @@ export class BrewerieDetailsComponent implements OnInit {
 
   getState() {
     this.stateSubscription = this.store.select((state: any) => {
-      const { selectedBrewerie } = state.newAppState;
-      this.state = { selectedBrewerie };
-      if(!this.state.selectedBrewerie)
-        this.getBrewerieBySession();
+      if(state &&  state.newAppState){
+        const { selectedBrewerie } = state.newAppState;
+        this.state = { selectedBrewerie };
+        if(!this.state.selectedBrewerie)
+          this.getBrewerieBySession();
+      }
     }).subscribe();
   }
 
