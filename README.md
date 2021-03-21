@@ -14,16 +14,17 @@
 <p>- [x] Layout responsivo</p>
 <p>- [x] ng test rodando ok</p>
 <h3>Demonstração</h3>
-Acesse este link para ter acesso a aplicação: https://desafio-brewery-linx.herokuapp.com/
+<p>Acesse este link para ter acesso a aplicação:</p>
+<p>https://desafio-brewery-linx.herokuapp.com/</p>
 <h3>Pré-requisitos</h3>
-<p>Node.js e npm</p>
+<p>Node.js/npm</p>
 <p>Angular-cli</p>
 <h3>Como rodar</h3>
 <p>Após ter todos os pré-requisitos instalados, basta seguir para a pasta do desafio-frontend, rodar o comando npm install, aguardar finalizar todo o processo e depois utilizar o comando ng serve para rodar a plicação na porta 4200</p>
 <h3>Tecnologias utilizadas</h3>
 <p>Angular v11.2.4</p>
 <p>Node.js v10.14.2</p>
-<p>Typescript 4.1.5</p>
-<p>Redux/Store 11.0.1</p>
-<p>Express 4.17.1</p>
-<p>Bootstrap 4</p>
+<p>Typescript v4.1.5</p>
+<p>Redux/Store v11.0.1</p>
+<p>Express v4.17.1</p>
+<p>Bootstrap v4.5.0</p>
