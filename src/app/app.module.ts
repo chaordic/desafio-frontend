@@ -11,7 +11,6 @@ import { ButtonComponent } from './shared-components/layout/button/button.compon
 import { BrewerieDetailsComponent } from './pages/brewerie-details/brewerie-details.component';
 import { FilterComponent } from './shared-components/util/filter/filter.component';
 import { PaginatorComponent } from './shared-components/util/paginator/paginator.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SelectComponent } from './shared-components/layout/select/select.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
@@ -34,7 +33,6 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule,
     FormsModule,
     HttpClientModule,
     StoreModule.forRoot({newAppState: reducer}),
