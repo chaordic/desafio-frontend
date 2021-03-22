@@ -16,7 +16,7 @@ export class BreweriesListComponent implements OnInit {
   constructor(
     private router: Router,
     private store: Store<AppState>,
-    private global: GlobalService) { }
+    public global: GlobalService) { }
 
   stateSubscription: any;
   state: any;
@@ -24,6 +24,10 @@ export class BreweriesListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getState();
+  }
+
+  ngOnDestroy(){
+    this.stateSubscription.unsubscribe();
   }
 
   getState() {

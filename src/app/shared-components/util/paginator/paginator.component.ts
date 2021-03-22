@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Brewerie } from 'src/app/models/brewerie.model';
+import { GlobalService } from 'src/app/services/global-service/global.service';
 import { AppState } from 'src/app/state';
 import { fillPage } from 'src/app/state/state.actions';
 
@@ -11,7 +12,7 @@ import { fillPage } from 'src/app/state/state.actions';
 })
 export class PaginatorComponent implements OnInit {
 
-  constructor(private store: Store<AppState>) { }
+  constructor(private store: Store<AppState>, public global: GlobalService) { }
 
   stateSubscription: any;
   state: any;
@@ -20,6 +21,10 @@ export class PaginatorComponent implements OnInit {
 
   ngOnInit(): void {
     this.getState();
+  }
+
+  ngOnDestroy(){
+    this.stateSubscription.unsubscribe();
   }
 
   getState() {

@@ -17,12 +17,16 @@ export class FilterComponent implements OnInit {
 
   constructor(
     private store: Store<AppState>,
-    private global: GlobalService) { }
+    public global: GlobalService) { }
 
   ngOnInit(): void {
     this.getState();
     if (this.state && this.state.selectedFilter)
       this.global.filterBreweries(this.state.selectedFilter);
+  }
+
+  ngOnDestroy(){
+    this.stateSubscription.unsubscribe();
   }
 
   getState() {

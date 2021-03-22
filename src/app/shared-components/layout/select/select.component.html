@@ -1,4 +1,4 @@
 <select (change)="emitChange()" [(ngModel)]="selectedOption">
-    <option *ngFor="let opt of options">{{opt}}</option>
+    <option *ngFor="let opt of options; trackBy: global.trackByFn">{{opt}}</option>
 </select>
 <i class="fas fa-chevron-down" [style.color]="chevronColor"></i>

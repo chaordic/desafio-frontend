@@ -23,6 +23,10 @@ export class BrewerieDetailsComponent implements OnInit {
     this.getState();
   }
 
+  ngOnDestroy(){
+    this.stateSubscription.unsubscribe();
+  }
+
   getState() {
     this.stateSubscription = this.store.select((state: any) => {
       if(state &&  state.newAppState){

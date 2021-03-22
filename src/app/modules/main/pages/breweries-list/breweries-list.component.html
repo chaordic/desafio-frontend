@@ -4,7 +4,7 @@
         <div class="content-size">
             <lnx-filter></lnx-filter>
             <div class="card-container">
-                <lnx-card *ngFor="let brewerie of paginatedBreweries[state?.page]" [data]="brewerie"
+                <lnx-card *ngFor="let brewerie of paginatedBreweries[state?.page]; trackBy: global.trackByFn" [data]="brewerie"
                     (click)="navigateToDetails(brewerie)"></lnx-card>
             </div>
             <lnx-paginator *ngIf="paginatedBreweries" [pagedArray]="paginatedBreweries"></lnx-paginator>

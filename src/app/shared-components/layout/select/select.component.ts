@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { GlobalService } from 'src/app/services/global-service/global.service';
 
 @Component({
   selector: 'lnx-select',
@@ -14,7 +15,7 @@ export class SelectComponent implements OnInit {
 
   selectedOption: any;
 
-  constructor() { }
+  constructor(public global: GlobalService) { }
 
   ngOnInit(): void {
     if(this.selected)

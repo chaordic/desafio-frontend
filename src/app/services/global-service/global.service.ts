@@ -33,14 +33,19 @@ export class GlobalService {
         paginatedArray[page] = tempArray
         page++;
         tempArray = [];
-        cont= -1;
+        cont = -1;
       }
       cont++;
     });
     return paginatedArray;
   }
 
-  generateMapsLink(latitude: String, longitude: String){
+  public trackByFn(index: number, item: any) {
+    if (!item) return null;
+    return item.id;
+  }
+
+  generateMapsLink(latitude: String, longitude: String) {
     return "http://www.google.com/maps/place/" + latitude + "," + longitude;
   }
 }

@@ -19,8 +19,9 @@
 <h3>Pré-requisitos</h3>
 <p>Node.js/npm</p>
 <p>Angular-cli</p>
+<p>Express</p>
 <h3>Como rodar</h3>
-<p>Após ter todos os pré-requisitos instalados, basta seguir para a pasta do desafio-frontend, rodar o comando npm install, aguardar finalizar todo o processo e depois utilizar o comando ng serve para rodar a plicação na porta 4200</p>
+<p>Após ter todos os pré-requisitos instalados, basta seguir para a pasta do desafio-frontend, rodar o comando npm install, aguardar finalizar todo o processo e depois utilizar o comando node server.js para rodar a plicação na porta 8080, ou utilizar simplesmente o comando ng serve</p>
 <h3>Tecnologias utilizadas</h3>
 <p>Angular v11.2.4</p>
 <p>Node.js v10.14.2</p>
