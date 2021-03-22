@@ -18,7 +18,7 @@
 <p>Acesse este link para ter acesso a aplicação:</p>
 <p>https://desafio-brewery-linx.herokuapp.com/</p>
 <h3>Lighthouse Performance</h3>
-<img width="460" height="300" src="https://imgur.com/sQtvB6C">
+<img width="460" height="300" src="https://imgur.com/sQtvB6C">[img]https://i.imgur.com/sQtvB6C.png[/img]
 <h3>Pré-requisitos</h3>
 <p>Node.js/npm</p>
 <p>Angular-cli</p>
