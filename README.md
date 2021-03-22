@@ -13,6 +13,7 @@
 <p>- [x] Utilizando Redux para controlar todo o estado da aplicação</p>
 <p>- [x] Layout responsivo</p>
 <p>- [x] ng test rodando ok</p>
+<p>- [x] Lazy Loading</p>
 <h3>Demonstração</h3>
 <p>Acesse este link para ter acesso a aplicação:</p>
 <p>https://desafio-brewery-linx.herokuapp.com/</p>
