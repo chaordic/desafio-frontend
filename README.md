@@ -18,8 +18,8 @@
 <p>Acesse este link para ter acesso a aplicação:</p>
 <p>https://desafio-brewery-linx.herokuapp.com/</p>
 <h3>Lighthouse Performance</h3>
-<img src="https://github.com/lucasbarros92/desafio-frontend/blob/master/src/app/assets/images/lighthouse.png">
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+<img src="https://github.com/lucasbarros92/desafio-frontend/blob/master/src/app/assets/images/lighthouse.png?raw=true">
+![](https://github.com/lucasbarros92/desafio-frontend/blob/master/src/app/assets/images/lighthouse.png?raw=true)
 <h3>Pré-requisitos</h3>
 <p>Node.js/npm</p>
 <p>Angular-cli</p>
