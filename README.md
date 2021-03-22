@@ -18,6 +18,7 @@
 <p>Acesse este link para ter acesso a aplicação:</p>
 <p>https://desafio-brewery-linx.herokuapp.com/</p>
 <h3>Lighthouse Performance</h3>
+<img width="460" height="300" src="http://www.fillmurray.com/460/300">
 <img src="https://github.com/lucasbarros92/desafio-frontend/blob/master/src/app/assets/images/lighthouse.png?raw=true">
 ![](https://github.com/lucasbarros92/desafio-frontend/blob/master/src/app/assets/images/lighthouse.png?raw=true)
 <h3>Pré-requisitos</h3>
