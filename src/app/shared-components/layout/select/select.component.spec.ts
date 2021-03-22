@@ -1,4 +1,6 @@
+import { HttpClient, HttpHandler } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { StoreModule } from '@ngrx/store';
 
 import { SelectComponent } from './select.component';
 
@@ -8,7 +10,9 @@ describe('SelectComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SelectComponent ]
+      imports: [ StoreModule.forRoot({})],
+      declarations: [ SelectComponent ],
+      providers: [HttpClient, HttpHandler]
     })
     .compileComponents();
   });

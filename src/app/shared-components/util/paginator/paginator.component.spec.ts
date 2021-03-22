@@ -1,3 +1,4 @@
+import { HttpClient, HttpHandler } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { StoreModule } from '@ngrx/store';
 
@@ -10,7 +11,8 @@ describe('PaginatorComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [StoreModule.forRoot({})],
-      declarations: [ PaginatorComponent ]
+      declarations: [ PaginatorComponent ],
+      providers: [HttpClient, HttpHandler]
     })
     .compileComponents();
   });
