@@ -22,8 +22,6 @@ export class PaginatorComponent implements OnInit {
     this.getState();
   }
 
-  ngOnChanges() {}
-
   getState() {
     this.stateSubscription = this.store.select((state: any) => {
       if (state && state.newAppState) {

@@ -41,6 +41,6 @@ export class GlobalService {
   }
 
   generateMapsLink(latitude: String, longitude: String){
-    return "http://www.google.com/maps/place/" + latitude + "," + longitude
+    return "http://www.google.com/maps/place/" + latitude + "," + longitude;
   }
 }
