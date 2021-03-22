@@ -7,7 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
 import { reducer } from '../app/state/state.reducer';
 import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import { CommonModule } from '@angular/common';
     HttpClientModule,
     StoreModule.forRoot({newAppState: reducer}),
   ],
-  providers: [Compiler],
+  providers: [Compiler, {provide:LocationStrategy, useClass:HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
