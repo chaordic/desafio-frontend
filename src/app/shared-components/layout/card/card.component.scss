@@ -27,6 +27,10 @@
             margin-bottom: 0;
             a{
                 color: #387dec;
+                text-decoration: none;
+            }
+            a:hover{
+                text-decoration: underline;
             }
         }
     }
