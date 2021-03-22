@@ -16,9 +16,9 @@
 <p>- [x] Lazy loading</p>
 <h3>Demonstração</h3>
 <p>Acesse este link para ter acesso a aplicação:</p>
-<h3>Lighthouse Performance</h3>
- <img src="https://github.com/src/app/assets/images/lighthouse.png">
 <p>https://desafio-brewery-linx.herokuapp.com/</p>
+<h3>Lighthouse Performance</h3>
+<img src="https://github.com/src/app/assets/images/lighthouse.png">
 <h3>Pré-requisitos</h3>
 <p>Node.js/npm</p>
 <p>Angular-cli</p>
