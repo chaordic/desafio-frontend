@@ -7,4 +7,7 @@ export interface iUserContextProvider {
 export interface iUserContext {
   breweries: ICardBrewery[];
   setFilterBreweries: React.Dispatch<React.SetStateAction<string>>;
+  searchBrewery: ICardBrewery;
+  setSearchBrewery: React.Dispatch<React.SetStateAction<ICardBrewery>>;
+  page: string | null;
 }

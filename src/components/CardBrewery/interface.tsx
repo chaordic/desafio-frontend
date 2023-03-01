@@ -21,3 +21,7 @@ export interface ICardBrewery {
 export interface IPropyCardBrewery {
   brewery: ICardBrewery;
 }
+
+export interface IPropySpan {
+  type: string | null;
+}

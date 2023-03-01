@@ -1,8 +1,10 @@
+import { FooterS } from "./styled";
+
 const Footer = () => {
   return (
-    <footer>
+    <FooterS>
       <h2>Breweries List</h2>
-    </footer>
+    </FooterS>
   );
 };
 export default Footer;

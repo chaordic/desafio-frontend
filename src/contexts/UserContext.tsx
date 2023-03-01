@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { ICardBrewery } from "../components/CardBrewery/interface";
 import api from "../servers/Api";
 import { iUserContext, iUserContextProvider } from "./interface";
@@ -11,6 +11,7 @@ export const UserContextProvider = ({ children }: iUserContextProvider) => {
   const query = new URLSearchParams(location.search);
   const page = query.get("page");
 
+  const [searchBrewery, setSearchBrewery] = useState({} as ICardBrewery);
   const [breweries, setBreweries] = useState([] as ICardBrewery[]);
   const [filterBreweries, setFilterBreweries] = useState("");
 
@@ -35,6 +36,9 @@ export const UserContextProvider = ({ children }: iUserContextProvider) => {
       value={{
         breweries,
         setFilterBreweries,
+        searchBrewery,
+        setSearchBrewery,
+        page,
       }}
     >
       {children}

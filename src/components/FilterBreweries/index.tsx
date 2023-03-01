@@ -1,4 +1,5 @@
 import { useProvider } from "../../contexts/UserContext";
+import { FormS } from "./styled";
 
 const FilterBreweries = () => {
   const { setFilterBreweries } = useProvider();
@@ -26,7 +27,7 @@ const FilterBreweries = () => {
   };
 
   return (
-    <form>
+    <FormS>
       <label>Filter:</label>
       <select onChange={(e) => handleSelect(e.target.value)}>
         {options.map((option) => (
@@ -35,7 +36,7 @@ const FilterBreweries = () => {
           </option>
         ))}
       </select>
-    </form>
+    </FormS>
   );
 };
 

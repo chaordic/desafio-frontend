@@ -16,27 +16,30 @@ export const GlobalStyle = createGlobalStyle`
     border-radius:0 4px 4px 0;
   }
   *::-webkit-scrollbar-thumb {
-    background-color: var( --color-primary);
+    background-color: #FFFFFF;
     border-radius: 10px;
-    border: 3px solid var(--color-gray-0);
+    border: 3px solid #D7D4D8;
   }
   ul,ol{
     list-style: none;
   }
     :root{
-         --color-primary:#FF577F;
-         --color-primary-focus:#FF427F;
-         --color-primary-negative:#59323F;
-         --color-grey-0:#F8F9FA;
-         --color-grey-1:#868E96;
-         --color-grey-2:#343B41;
-         --color-grey-3:#212529;
-         --color-grey-4:#121214;
-         --color-sucess:#3FE864;
-         --color-negative:#E83F5B;
+        --color-primary:#2d2a2b;
+        --color-micro:#00d1b2;
+        --color-contract:#363636;
+        --color-brewpub:#ffdd57;
+        --color-nano:#f85149;
+        --color-regional:#3273dc;
+        --color-large:#852386;
+        --color-planning:#858623;
+        --color-bar:#2ad100;
+        --color-proprieter:#ffdd57;
+        --color-closed:#0a0c10;
+        --color-bg:#ffffff;
+        --color-footer:#fafafa;
     }
     body{
-      background-color: var( --color-grey-4);
-      color: var(--color-grey-0);
+      background-color: var( --color-bg);
+      color: var(--color-contract);
     }
 `;
