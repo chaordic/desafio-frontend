@@ -1,12 +1,12 @@
 import { useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { ICardBrewery } from "../../components/CardBrewery/interface";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import SearchBrewery from "../../components/SearchBrewery";
 import { useProvider } from "../../contexts/UserContext";
 import api from "../../servers/Api";
-import { MainS } from "./styled";
+import { LinkDetailS, MainS } from "./styled";
 
 const BreweryDetail = () => {
   const { setSearchBrewery } = useProvider();
@@ -30,7 +30,9 @@ const BreweryDetail = () => {
     <>
       <Header />
       <MainS>
-        <Link to={"/"}>&lsaquo; Back</Link>
+        <LinkDetailS to={"/"}>
+          &lsaquo;<span>Back</span>
+        </LinkDetailS>
         <SearchBrewery />
       </MainS>
       <Footer />

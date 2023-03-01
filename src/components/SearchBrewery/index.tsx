@@ -1,4 +1,5 @@
 import { useProvider } from "../../contexts/UserContext";
+import { DivSearchS } from "./styled";
 
 const SearchBrewery = () => {
   const { searchBrewery } = useProvider();
@@ -18,7 +19,7 @@ const SearchBrewery = () => {
   } = searchBrewery;
 
   return (
-    <div>
+    <DivSearchS>
       <h3>{name}</h3>
       <address>
         {brewery_type && <p>Type: {brewery_type}</p>}
@@ -27,7 +28,11 @@ const SearchBrewery = () => {
         {state && <p>State: {state}</p>}
         {postal_code && <p>Postal code: {postal_code}</p>}
         {country && <p>Country: {country}</p>}
-        {website_url && <a href={website_url}>{website_url}</a>}
+        {website_url && (
+          <p>
+            Website: <a href={website_url}>{website_url} </a>
+          </p>
+        )}
         {phone && <p>Phone: {phone}</p>}
         {latitude && longitude && (
           <p>
@@ -38,7 +43,7 @@ const SearchBrewery = () => {
           </p>
         )}
       </address>
-    </div>
+    </DivSearchS>
   );
 };
 
